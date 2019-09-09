@@ -1,0 +1,43 @@
+.Square{
+    display: grid;
+    grid-template-columns:3fr 2fr;
+    align-items: center;
+    justify-content: center;
+    width: 100%; 
+    overflow: hidden;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: rgb(255, 255, 255);
+}
+.Title{
+    color:rgba(0,0,0,0.87);
+}
+
+.Img{
+    width: 100%;
+    padding-right: 20px;
+}
+.InfoContainer{
+    display: flex;
+    
+    flex-flow: column;
+    justify-content: center;
+    padding: 40px;
+    
+}
+.Ulist{
+    display: flex;
+    list-style: none;
+}
+.Ulist li{
+    padding: 10px 10px 10px 0px;
+    
+}
+.Ulist li img{
+    padding: 10px 10px 10px 0px;
+    height: 48px;
+}
+
+
+.Info{
+    padding: 10px 10px 10px 0px;
+}

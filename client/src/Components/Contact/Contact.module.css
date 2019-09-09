@@ -1,0 +1,60 @@
+.Container{
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin: 20px 0;
+    
+}
+.Form{
+    width: 90%;
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    background: rgb(255, 255, 255);
+    padding: 40px;
+    z-index: 0;
+}
+.InputContainer{
+    position: relative;
+    display: flex;
+    flex-flow: column;
+}
+
+.Input{
+    width: 400px;
+    height: 40px;
+    border:none;
+    border-bottom: 1px solid black;
+    margin: 15px 0;
+    background: transparent;
+    padding: 0 10px;
+}
+.Input:active,:focus{
+    outline: none;
+}
+
+.Span{
+    position: absolute;
+    top: 25px;
+    left: 10px;
+    z-index: -1;
+    transition: 300ms ease all;
+}
+.Active{
+    position: absolute;
+    font-size: 12px;
+    top: 10px;
+    left: 10px;
+}
+.Message{
+    width: 700px;
+    height: 200px;
+    resize: none;
+    border: 1px solid rgb(78, 78, 78);
+    padding: 10px;
+}
+.MessageSpan{
+    font-size: 1.2rem; 
+    margin: 10px;
+}

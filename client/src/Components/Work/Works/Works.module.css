@@ -1,0 +1,7 @@
+.Works{
+    display: grid;
+    margin-top: 50px;
+    width: 90%;
+    grid-template-columns: repeat(1,minmax(200px,1fr));
+    gap: 10px;
+}

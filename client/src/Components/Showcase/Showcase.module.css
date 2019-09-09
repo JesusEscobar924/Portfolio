@@ -1,0 +1,13 @@
+.Showcase{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    height: 100vh;
+    color:rgba(0,0,0,0.87);
+}
+.Name{
+   font-weight: 300;
+    font-size: 5rem;  
+}
