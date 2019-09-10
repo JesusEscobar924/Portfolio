@@ -5,8 +5,10 @@ import node from '../../../../Assets/node.png'
 import react from '../../../../Assets/react.png'
 import redux from '../../../../Assets/redux.png'
 import firebase from '../../../../Assets/firebase.png'
+import uniqid from 'uniqid';
 
-const Square =(props)=> {   
+const Square =(props)=> {
+    
         const {tools} = props;
         const toolimg={
             redux,
@@ -19,15 +21,14 @@ const Square =(props)=> {
 
 
         if(tools){
-            toolList= tools.map(item=> 
-            {   
-                
+            toolList= tools.map(item =>  {   
+                let unid = uniqid();   
                 return(
-                   <li><img src={toolimg[item]}/></li> 
+
+                   <li key={unid} ><img src={toolimg[item]} alt="Item"/></li> 
+                   
                 )
-                
-            }
-            )
+            })
         }
 
         
@@ -44,7 +45,17 @@ const Square =(props)=> {
                     <ul className={classes.Ulist}>
                         {toolList}
                     </ul>
-                    <Button link={props.link}/>
+
+                    <Button link={props.link} content={
+                        <a 
+                            href={props.link} 
+                            target="_blank" 
+                            rel="noopener noreferrer">
+                            Take a look
+                        </a>}>
+
+                    </Button>
+
                 </div>
                 <div className={classes.ImageContainer}>
                     <img className={classes.Img} src={props.img} alt="Item"/>

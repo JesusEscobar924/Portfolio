@@ -4,11 +4,12 @@ const bodyParser = require('body-parser');
 const path = require('path');
 const exphbs = require('express-handlebars')
 const nodemailer = require('nodemailer');
-
+  
 
 if (process.env.NODE_ENV !== 'production') require('dotenv').config();
 
-
+let pass = process.env.PASSWORD;  
+let email = process.env.EMAIL; 
 
 const app = express();
 const port = process.env.PORT || 5000;
@@ -27,7 +28,7 @@ if (process.env.NODE_ENV === 'production') {
   app.get('*', function(req, res) {
     res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
   });
-}
+}  
 
 app.listen(port, error => {
   if (error) throw error;
@@ -49,10 +50,9 @@ app.post('/send',(req,res)=>{
   let transporter = nodemailer.createTransport({
     host: 'smtp.gmail.com',
     port: 465,
-    secure: true, // true for 465, false for other ports
     auth: {
-        user: 'ljesusescobar924@gmail.com', // generated ethereal user
-        pass: '08611429ll'  // generated ethereal password
+        user: email,
+        pass: pass
     },
     tls:{
       rejectUnauthorized:false
@@ -60,10 +60,10 @@ app.post('/send',(req,res)=>{
   });
 
   let mailOptions = {
-    from: '"Nodemailer Contact" <ljesusescobar924@gmail.com>', // sender address
-    to: 'leider924@gmail.com', // list of receivers
-    subject: 'Node Contact Request', // Subject line
-    text: 'Hello world?', // plain text body
+    from: '"Someone" <ljesusescobar924@gmail.com>', // sender address
+    to: 'leider924@gmail.com', // list of receivers 
+    subject: 'Funciona?', // Subject line
+    text: `${req.body.message}`, // plain text body
     html: emailsend // html body
 };
 transporter.sendMail(mailOptions, (error, info) => {

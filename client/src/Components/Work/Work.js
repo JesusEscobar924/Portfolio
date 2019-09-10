@@ -3,7 +3,10 @@ import Works from './Works/Works'
 import classes from './Work.module.css'
 const work = () =>(
     <div className={classes.Work}>
-        <h1>Work</h1>
+        <div className={classes.Lead}>
+            <h1>Projects</h1>
+        </div>
+        
         <Works/>
     </div>
 )

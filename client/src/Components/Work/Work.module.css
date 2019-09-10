@@ -2,5 +2,12 @@
     display: flex;
     flex-flow: column;
     align-items: center;
+    background: black;
+    padding: 20px 0;
+    color: white;
+    
+}
+.Lead{
+    font-size: 1.8rem;
 
 }

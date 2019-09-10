@@ -1,6 +1,9 @@
 import React from 'react';
 import Square from './Square/Square'
 import classes from './Works.module.css';
+
+import uniqid from 'uniqid';
+
 const works = () =>{
     const items=[
         {
@@ -30,19 +33,22 @@ const works = () =>{
         
     ]
     let square =  items.map(item => {
+        let unid = uniqid();  
         return(
             <Square  
+                key={unid}
                 img={item.img} 
                 title={item.Title} 
                 api={item.API}  
                 info={item.Info} 
                 tools={item.Tools} 
                 link={item.link}
+                
             />
         )
     })
     return(
-        <div className={classes.Works}>
+        <div  className={classes.Works}>
             {square}
         </div>
     )
