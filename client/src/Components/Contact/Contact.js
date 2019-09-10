@@ -22,7 +22,7 @@ class Contact extends React.Component{
         event.preventDefault();
         this.setState({ name: '', email: '',message:'' });
         axios({
-            url: 'http://localhost:5000/send',
+            url: '/send',
             method: 'post',
             data: {
                 name:this.state.name,
