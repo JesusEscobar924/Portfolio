@@ -9,7 +9,7 @@ const works = () =>{
         {
             img:"https://i.ibb.co/hfhB865/sdfsdf.png",
             Title:"Zippo's",
-            Info:"Found any product of Zippo",
+            Info:"A Ecommerce website builded using React with React Router and Redux, implements Stripe for online payment processing and Firebase for User Authentication.",
             Tools:["react","redux","node","firebase"],
             
             link: "https://zippo-project.herokuapp.com/"
@@ -17,7 +17,7 @@ const works = () =>{
         {
             img:"https://i.ibb.co/82MSj8s/sdsd.png",
             Title:"Cyborg News",
-            Info:"News website, using data provided for New York Times API and AccuWeather API",
+            Info:"A React single page app, who uses data provided for New York Times API and AccuWeather API.",
             Tools:["react", "node"],
             
             link: "https://cyborg-news.herokuapp.com/"
@@ -26,7 +26,7 @@ const works = () =>{
         {
             img:"https://i.ibb.co/C58Sc9m/asdasd.png",
             Title:"To-do List",
-            Info:"Todo-list who saves your tasks in a database ",
+            Info:"Todo-list who implements Firebase User Authentication and Firebase Database.",
             Tools:["react", "firebase"],
             link: "https://todo-list94.herokuapp.com/"
         },
@@ -41,7 +41,7 @@ const works = () =>{
                 title={item.Title} 
                 api={item.API}  
                 info={item.Info} 
-                tools={item.Tools} 
+                tools={item.Tools}  
                 link={item.link}
                 
             />
